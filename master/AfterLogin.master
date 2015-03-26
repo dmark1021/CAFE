@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AfterLogin.master.cs" Inherits="master_AfterLogin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"  />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Description of your web page goes here." />
+    <meta name="keywords" content="Keywords for you web page go here. Each keyword or group of keyword phrases are separated by a comma. Keep this keyword list short and relevant to the content of this specific page and also relevant to the tile of the specific page." />
+    <title>TABLE - simple</title>
+    
+    <style type="text/css">
+        .style2
+        {
+            height: 8px;
+            width: 729px;
+        }
+        .style3
+        {
+            height: 8px;
+            width: 349px;
+        }
+        .style6
+        {
+            width: 364px;
+        }
+    </style>
+    
+</head>
+<body>
+    <%--Changed min-width: 880px so that schedule not "cut off". Dec 2009 TAN--%>
+    <form id="Form" runat="server" style="overflow: auto; min-width: 880px;" >
+    
+    <table border="0" cellspacing="0" cellpadding="0" id="mainnav-container">
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+    <caption  class="invisible" title="mainnav-container table caption"></caption>
+    <thead>
+        <tr><th class="invisible" title="Outer table" ></th></tr>
+    </thead>
+        <tr>
+            <td >
+               
+
+                Welcome&nbsp;<asp:Label ID="lblname" runat="server" Text="Label"></asp:Label>&nbsp;
+	
+               
+            </td>
+                <td id="mainnav-side" align="left" class="style3"><p>
+                   <asp:Label ID="dateLabel" runat="server" Text="Label"></asp:Label> </p>
+            </td>
+             <td align="middle" class="style6"> <asp:LinkButton ID="LinkButton2" runat="server" Width="385px" PostBackUrl="~/Logout.aspx"   >Logout</asp:LinkButton></td>
+        </tr>
+    </table>
+    <!--
+  
+  SITE NAME & SLOGAN
+  
+-->
+    <table border="0" cellspacing="0" cellpadding="0" id="header">
+    <caption class="invisible" title="header table caption"></caption>
+    <thead>
+        <tr><th class="invisible" title="header table"></th></tr>
+    </thead>
+        <tr>
+            <td align="left" colspan="2">
+                CAFE - College Administrative Forms eManager</td>
+        </tr>
+    </table>
+    <!--
+  
+  BREADCRUMBS
+  
+  -->
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <table border="0" cellspacing="0" cellpadding="0" id="breadcrumb-container">
+    <caption class="invisible" title="breadcrumb-container table caption"></caption>
+    <thead>
+    </thead>
+        <tr  align="justify">
+        <td class="style2" align="justify">
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+                    ondatabound="Menu1_DataBound" Font-Size="Small" Font-Underline="True" align="left"
+                    Orientation="Horizontal" Width="685px"  
+                    MaximumDynamicDisplayLevels="1" StaticDisplayLevels="3" Height="16px" >
+                    <DynamicHoverStyle Font-Underline="True" />
+                </asp:Menu></td>
+            <!--<td id="breadcrumb-right" class="profileTBL">
+           
+                      <asp:LoginStatus ID="LoginStatus1" runat="server" 
+                    LogoutPageUrl="~/Default.aspx" LogoutAction="Redirect" />
+                 
+                
+                
+                </td>-->
+        </tr>
+    </table>
+    <!-- CONTENT CONTAINER -->
+    <table border="0" id="content-container">
+       <tbody>
+        <tr align="left">
+            <td id="content" align="left">
+                <asp:ContentPlaceHolder ID="ContentPlaceholder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            
+            
+        </tr>
+        </tbody>      
+        
+    </table>
+    <!-- 
+	
+  FOOTER
+  
+-->
+    <table border="0" cellspacing="0" cellpadding="0" id="footer">
+    <caption class="invisible" title="footer table caption"></caption>
+    <thead>
+        <tr><th class="invisible" title="footer table">
+       
+        
+       
+            </th></tr>
+    </thead>
+        <tr>
+            <td>
+                <p style="width: 443px">
+                    <br />
+                    Copyright Gannon University CIS© 2008&nbsp;         </td>
+            <td>
+                <p style="width: 100px">
+                    <br />
+                    v2011.08</p>
+            </td>
+        </tr>
+    </table>
+</form>
+   </body>
+</html>

@@ -1,0 +1,66 @@
+<%-- This master was created for the Colleges Home Page.  The College of Engineering & Business and the Morosky College. Is also used for the College Forms Page.--%>
+<%-- June 2009 TAN --%>
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Colleges.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Master for the Colleges</title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="../App_Themes/brown/css/CollegeHome.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="wrapper">
+<form id="form1" runat="server">
+
+    <div class="banner">  
+        <img alt="CAFE Banner" src="../App_Themes/brown/image/CafeLogoJune2009.jpg" 
+            style="width: 778px; height: 120px" />
+    </div> 
+           
+    <asp:ContentPlaceHolder ID="CollegeName" runat="server">  
+    </asp:ContentPlaceHolder>
+   
+        <ul class="menuListItems">
+            <li></li>
+            <li><asp:HyperLink ID="HyperLinkCollege" runat="server" NavigateUrl="" Text="Dean's Home"></asp:HyperLink> </li>
+            <li></li>
+            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://www.gannon.edu/programs/majors_programs/default.asp" Text="Majors and Programs"></asp:HyperLink></li>
+            <li></li>
+            <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="../Forms/CollegeForms.aspx" Text="College Forms"></asp:HyperLink></li>
+            <li></li>
+            <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="../LoginValidation.aspx" Text="Faculty On-Line Schedule Form"></asp:HyperLink></li>
+            <li></li>          
+            <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="http://www.gannon.edu/depts/hr/Forms/" Text="HR Forms"></asp:HyperLink></li>
+            <li></li>
+            <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="http://www.gannon.edu/" Text="GU Home"></asp:HyperLink></li>
+            <li></li>
+        </ul>
+        
+    <div class="dateLabelColHome">
+        <asp:Label ID="dateLabelColHome" runat="server" Text="Date"></asp:Label>
+    </div>
+        
+     <div class="DeansInfo">
+        <asp:ContentPlaceHolder ID="DeansInfo" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    <div class="footer">
+        <address>109 University Square • Erie, Pennsylvania 16541-0001 <br />
+        1-800 GANNON-U (1-800-426-6668) or 814-871-7000
+        </address>
+    </div>
+    
+</form>
+  
+</body>
+
+</html>
+

@@ -1,0 +1,186 @@
+﻿body 
+{
+	background: white;
+}
+	
+.wrapper
+{
+    min-height: 100%;
+    position: relative;
+    border: solid 1px #4D0000;
+    border-bottom: none;
+    padding:0;
+    margin: 0 auto 0 auto;
+    width: 778px;
+    height: 827px;
+    background-color: white;
+}
+
+.banner
+{
+    width: 778px;
+    padding-bottom: 0px;
+}
+
+.collegeNameBanner
+{
+    width: 778px;
+    height: 90px;
+    padding:0px;
+    margin: -5px auto auto auto;
+    position: absolute;
+    border-bottom: solid 1px #cbcbcb;
+}
+
+.dateLabelColHome
+{
+    margin: 65px auto auto 8px;
+    position: absolute;
+    color: #413f3f;
+    font-size: small;
+    font-weight:normal;
+}
+
+.menuListItems
+{
+    line-height: normal;
+    text-align: left;
+    position: absolute;
+    float: none;
+    list-style-type: none;
+    top: 208px;
+    left: auto;
+    width: auto;
+    margin: 0px auto auto 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #891517;
+    font-size: small;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menuListItems a:active {color: #FFFFFF;}
+.menuListItems a:link {color: #FFFFFF;}
+.menuListItems a:visited {color: #FFFFFF;}
+
+.menuListItems a:hover {color: #C0C0C0;}
+
+.DeansInfo
+{
+    margin: 90px auto auto 305px;
+    position: absolute;
+    padding: 0px;
+    background-color: #FFFFFF;
+}
+
+/*.DeansInfo a:link {color: #993333}*/
+.DeansInfo a:link {color: #bf0505}
+.DeansInfo a:active {color: #bf0505}
+.DeansInfo a:visited {color: #bf0505}
+.DeansInfo a:hover {color: black;}
+
+.DeansInfo h2 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: Black;
+    font-size: medium;    
+    line-height: normal;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+/*# span used for name */
+#DeansName
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: Black;
+    font-size: small;    
+    line-height: normal;
+    text-align: left;
+    font-weight: bold;
+    
+}
+
+.DeansInfo address
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #bf0505;
+    font-size: small;
+    font-weight: normal;
+    padding-top: 0px;
+    margin-top: -17px;
+    line-height: 1.5em;
+    font-style: normal;
+}
+
+.footer
+{
+    border-top-style: solid;
+    border-top-width:1px;
+    border-top-color: #4D0000;
+    background-color: #620303;
+    width: 778px;
+    height: 45px;
+    padding: 0px 0px 20px 0px;
+    margin: auto auto auto auto;
+    position: absolute;
+    bottom: 0;
+}
+.footer address
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: White;
+    /*color: #fdc865; */
+    font-size: small;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.formList
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #bf0505;
+    font-size: small;
+    font-weight: normal;      
+    margin: 5px auto auto -20px;
+    font-style: normal;
+    background-color: white;
+    list-style-type: none;
+}
+
+.formList h2        
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: Black;
+    font-size: medium;    
+    line-height: normal;
+    text-align: left;
+    font-weight: normal;
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+
+.formList li
+{
+    list-style-type: none;
+    margin-top: -10px;
+    margin-left: -40px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    line-height: 1.6em;
+}
+
+/* For asp:HyperLink */
+A.formListLink:link {color: #bf0505}
+A.formListLink:visited {color: #bf0505}
+A.formListLink:hover {color: #620303}
+A.formListLink:active {color: #620303}
+A.formList:li {list-style-type: none;}
+
+

@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="CAFEConnectionString2">
+      <rd:DataSourceID>4db9accf-4975-4b78-8487-650393357c28</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>8in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="rptSemester">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>10in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.25in</RightMargin>
+  <LeftMargin>0.25in</LeftMargin>
+  <BottomMargin>0.5in</BottomMargin>
+  <rd:ReportID>082f6fb2-51d9-4fe1-94d6-0fc81d2563ab</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="image_html">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>11in</PageWidth>
+  <DataSets>
+    <DataSet Name="CAFEDataSet_SelectFacultyScheduleHours">
+      <Fields>
+        <Field Name="FacultyID">
+          <DataField>FacultyID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="facName">
+          <DataField>facName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DeptName">
+          <DataField>DeptName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CollegeName">
+          <DataField>CollegeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="facid">
+          <DataField>facid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="finalrank">
+          <DataField>finalrank</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="rank">
+          <DataField>rank</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Friday">
+          <DataField>Friday</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DeanName">
+          <DataField>DeanName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Deanphone">
+          <DataField>Deanphone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Deanroom">
+          <DataField>Deanroom</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Office">
+          <DataField>Office</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhoneExtension">
+          <DataField>PhoneExtension</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="monday">
+          <DataField>monday</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tuesday">
+          <DataField>tuesday</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="wednesday">
+          <DataField>wednesday</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="thursday">
+          <DataField>thursday</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CAFEConnectionString2</DataSourceName>
+        <CommandText>dbo.SelectFacultyScheduleHours</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CAFEDataSet</rd:DataSetName>
+        <rd:TableName>SelectFacultyScheduleHours</rd:TableName>
+        <rd:TableAdapterName>
+        </rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>
+        </rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>10.375in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox13">
+        <Top>2.125in</Top>
+        <Width>1in</Width>
+        <Style>
+          <Color>Maroon</Color>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.25in</Left>
+        <Height>0.25in</Height>
+        <Value>OFFICE:</Value>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <Top>2.125in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextDecoration>Underline</TextDecoration>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.25in</Left>
+        <Height>0.25in</Height>
+        <Value>=Fields!Office.Value</Value>
+      </Textbox>
+      <Table Name="table2">
+        <ZIndex>12</ZIndex>
+        <Top>4.5in</Top>
+        <Width>9.875in</Width>
+        <Style>
+          <BorderColor>
+            <Default>Maroon</Default>
+          </BorderColor>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>If I am not available contact:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>NAME</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>PHONE</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>ROOM</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.29167in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>3.96892in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.04848in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.85736in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.00024in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.83334in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Dean:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DeanName">
+                      <rd:DefaultName>DeanName</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DeanName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Deanphone">
+                      <rd:DefaultName>Deanphone</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Deanphone.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Deanroom">
+                      <rd:DefaultName>Deanroom</rd:DefaultName>
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Deanroom.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.29167in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Interim Provost &amp; Vice President For Academic Affairs:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox20">
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Dr. Linda Fleming</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>(814) 871-7568</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox23">
+                      <Style>
+                        <Color>Maroon</Color>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Old Main 204</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.25in</Left>
+      </Table>
+      <Textbox Name="textbox18">
+        <rd:DefaultName>textbox18</rd:DefaultName>
+        <Top>2.5in</Top>
+        <Width>0.875in</Width>
+        <Style>
+          <Color>Maroon</Color>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.75in</Left>
+        <Height>0.25in</Height>
+        <Value>PHONE:</Value>
+      </Textbox>
+      <Textbox Name="textbox17">
+        <rd:DefaultName>textbox17</rd:DefaultName>
+        <Top>2.125in</Top>
+        <Width>0.75in</Width>
+        <Style>
+          <Color>Maroon</Color>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.75in</Left>
+        <Height>0.25in</Height>
+        <Value>e:Mail:</Value>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <rd:DefaultName>textbox8</rd:DefaultName>
+        <Top>2.5in</Top>
+        <Width>1.75in</Width>
+        <Style>
+          <Color>Maroon</Color>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25in</Left>
+        <Height>0.25in</Height>
+        <Value>DEPARTMENT:</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <rd:DefaultName>textbox7</rd:DefaultName>
+        <Top>2.125in</Top>
+        <Width>0.875in</Width>
+        <Style>
+          <Color>Maroon</Color>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25in</Left>
+        <Height>0.25in</Height>
+        <Value>NAME:</Value>
+      </Textbox>
+      <Textbox Name="textbox22">
+        <rd:DefaultName>textbox22</rd:DefaultName>
+        <Top>1.125in</Top>
+        <Width>5.5in</Width>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>36pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.625in</Left>
+        <Height>0.625in</Height>
+        <Value>=Parameters!rptSemester.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.25in</Top>
+        <Width>5.5in</Width>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>24pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.625in</Left>
+        <Height>0.875in</Height>
+        <Value>Faculty Office Hours and Teaching   Schedule</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Top>0.25in</Top>
+        <Width>4.12in</Width>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>5</ZIndex>
+        <Left>0.25in</Left>
+        <Height>1.75in</Height>
+        <Value>image_html</Value>
+      </Image>
+      <Textbox Name="facName">
+        <rd:DefaultName>facName</rd:DefaultName>
+        <Top>2.125in</Top>
+        <Width>2.875in</Width>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextDecoration>Underline</TextDecoration>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=Fields!facName.Value</Value>
+      </Textbox>
+      <Textbox Name="DeptName">
+        <rd:DefaultName>DeptName</rd:DefaultName>
+        <Top>2.5in</Top>
+        <Width>4.625in</Width>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextDecoration>Underline</TextDecoration>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2in</Left>
+        <Height>0.25in</Height>
+        <Value>=Fields!DeptName.Value</Value>
+      </Textbox>
+      <Textbox Name="Office">
+        <rd:DefaultName>Office</rd:DefaultName>
+        <Top>2.125in</Top>
+        <Width>2.75in</Width>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>14pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextDecoration>Underline</TextDecoration>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.5in</Left>
+        <Height>0.25in</Height>
+        <Value>=Fields!Email.Value</Value>
+      </Textbox>
+      <Textbox Name="PhoneExtension">
+        <rd:DefaultName>PhoneExtension</rd:DefaultName>
+        <Top>2.5in</Top>
+        <Width>1.875in</Width>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>16.5pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextDecoration>Underline</TextDecoration>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.625in</Left>
+        <Height>0.25in</Height>
+        <Value>="(814) 871-" &amp; Fields!PhoneExtension.Value </Value>
+      </Textbox>
+      <Table Name="table1">
+        <DataSetName>CAFEDataSet_SelectFacultyScheduleHours</DataSetName>
+        <Top>2.875in</Top>
+        <Width>9.875in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Monday">
+                      <rd:DefaultName>Monday</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!monday.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Tuesday">
+                      <rd:DefaultName>Tuesday</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!tuesday.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Wednesday">
+                      <rd:DefaultName>Wednesday</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!wednesday.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Thursday">
+                      <rd:DefaultName>Thursday</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!thursday.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Friday">
+                      <rd:DefaultName>Friday</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Maroon</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Friday.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.21in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <Color>DimGray</Color>
+          <BorderColor>
+            <Default>Maroon</Default>
+          </BorderColor>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monday</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Tuesday</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Wednesday</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Thursday</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Friday</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.975in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.975in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.975in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.975in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.975in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.71in</Height>
+        <Left>0.25in</Left>
+      </Table>
+    </ReportItems>
+    <Height>5.708in</Height>
+    <Style>
+      <BorderColor>
+        <Default>Maroon</Default>
+      </BorderColor>
+      <BorderStyle>
+        <Default>Double</Default>
+      </BorderStyle>
+      <BorderWidth>
+        <Default>4pt</Default>
+      </BorderWidth>
+    </Style>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>0.5in</TopMargin>
+  <PageHeight>8.5in</PageHeight>
+</Report>

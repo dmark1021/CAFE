@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+  <siteMapNode title="root" url="">   
+    <siteMapNode url="~\Forms\Schedule.aspx?s=mine" title="View My Schedule"  description="" Value="VS"  />
+  <siteMapNode url="~\Chair\FacSchedules.aspx" title="View Faculty's Schedule"  description="" Value="VFS"/>
+     <siteMapNode url="~\Chair\Inbox.aspx" title="Inbox"  description="" Value="I" />
+    <siteMapNode url="~\Dean\InboxAllDept.aspx" title="View Schedules"  description="" Value="DI" />
+    <siteMapNode url="~\Chair\PrintScheduleChair.aspx" title="Print Faculty's Schedule"  description="" Value="PFS" />
+    <siteMapNode url="~\Dean\PrintScheduleDean.aspx" title="Print Faculty's Schedule"  description="" Value="PFSD" />
+  </siteMapNode>
+</siteMap>
